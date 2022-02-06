@@ -5,3 +5,7 @@
 .App-link {
   color: #61dafb;
 }
+
+.App .footer {
+  margin: 30px 0;
+}
