@@ -11,7 +11,7 @@ function App() {
         <Dictionary />
         <footer className="footer">
           <a
-            href="https://github.com/angelanadal/weather-app-react"
+            href="https://github.com/angelanadal/dictionary-project"
             rel="noreferrer"
             target="_blank"
           >
