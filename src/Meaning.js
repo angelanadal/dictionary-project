@@ -7,7 +7,10 @@ export default function Meaning({ meaning }) {
       {meaning.definitions.map((definition, index) => {
         return (
           <div key={index}>
-            <p>{definition.definition}</p>
+            <p>
+              <strong>Definition: </strong>
+              {definition.definition}
+            </p>
             {definition.example ? (
               <p className="example">
                 <em>"{definition.example}"</em>
@@ -15,16 +18,21 @@ export default function Meaning({ meaning }) {
             ) : (
               ""
             )}
-            {definition.synonyms ? (
-              <ul className="synonyms">
-                {definition.synonyms.map((synonym, index) => {
-                  return (
-                    <li className="synonym" key={index}>
-                      {synonym}
-                    </li>
-                  );
-                })}
-              </ul>
+            {definition.synonyms.length ? (
+              <div>
+                <p>
+                  <strong>Synonyms: </strong>
+                </p>
+                <ul className="synonyms">
+                  {definition.synonyms.map((synonym, index) => {
+                    return (
+                      <li className="synonym" key={index}>
+                        {synonym}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             ) : (
               ""
             )}
