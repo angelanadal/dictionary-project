@@ -2,3 +2,12 @@
   color: purple;
   margin-left: 10px;
 }
+
+.Meaning .synonyms {
+  list-style: none;
+}
+
+.Meaning .synonym {
+  display: inline-block;
+  margin-right: 15px;
+}

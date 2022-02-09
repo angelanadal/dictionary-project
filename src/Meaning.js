@@ -15,6 +15,19 @@ export default function Meaning({ meaning }) {
             ) : (
               ""
             )}
+            {definition.synonyms ? (
+              <ul className="synonyms">
+                {definition.synonyms.map((synonym, index) => {
+                  return (
+                    <li className="synonym" key={index}>
+                      {synonym}
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              ""
+            )}
           </div>
         );
       })}
