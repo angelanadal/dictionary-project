@@ -9,20 +9,24 @@ export default function Results({ results }) {
   if (results) {
     return (
       <div className="Results">
-        <h2>{results.word}</h2>
-        {results.phonetics.map((phonetic, index) => {
-          return (
-            <div key={index}>
-              <span className="phonetic-text">/ {phonetic.text} /</span>
-              <div
-                className="btn btn-primary phonetic-listen-btn"
-                onClick={() => playAudio(phonetic.audio)}
-              >
-                Listen
+        <div className="background-card centered">
+          <h2>
+            <strong>{results.word}</strong>
+          </h2>
+          {results.phonetics.map((phonetic, index) => {
+            return (
+              <div key={index}>
+                <span className="phonetic-text">/ {phonetic.text} /</span>
+                <div
+                  className="btn btn-primary phonetic-listen-btn"
+                  onClick={() => playAudio(phonetic.audio)}
+                >
+                  Listen
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
         {results.meanings.map((meaning, index) => {
           return (
             <div key={index}>

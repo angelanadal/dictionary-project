@@ -26,7 +26,7 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={handleSubmit}>
+      <form className="centered" onSubmit={handleSubmit}>
         <input
           type="search"
           onChange={handleChange}

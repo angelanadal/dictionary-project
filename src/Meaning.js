@@ -3,42 +3,55 @@ import "./Meaning.css";
 export default function Meaning({ meaning }) {
   return (
     <div className="Meaning">
-      <h3>{meaning.partOfSpeech}</h3>
-      {meaning.definitions.map((definition, index) => {
-        return (
-          <div key={index}>
-            <p>
-              <strong>Definition: </strong>
-              {definition.definition}
-            </p>
-            {definition.example ? (
-              <p className="example">
-                <em>"{definition.example}"</em>
-              </p>
-            ) : (
-              ""
-            )}
-            {definition.synonyms.length ? (
+      <div className="background-card">
+        <h3>{meaning.partOfSpeech}</h3>
+        {meaning.definitions.map((definition, index) => {
+          return (
+            <div className="definition" key={index}>
               <div>
-                <p>
-                  <strong>Synonyms: </strong>
-                </p>
-                <ul className="synonyms">
-                  {definition.synonyms.map((synonym, index) => {
-                    return (
-                      <li className="synonym" key={index}>
-                        {synonym}
-                      </li>
-                    );
-                  })}
-                </ul>
+                <span className="definition-heading">
+                  <strong>Definition:</strong>
+                </span>{" "}
+                {definition.definition}
               </div>
-            ) : (
-              ""
-            )}
-          </div>
-        );
-      })}
+              {definition.example ? (
+                <span className="example">
+                  <span className="fren">🐙</span>
+                  <span className="example-wrapper">
+                    <span className="example-bubble">
+                      <div className="example-header">Example:</div>
+                      <span className="example-text">
+                        <em>"{definition.example}"</em>
+                      </span>
+                      <span class="speech-arrow"></span>
+                    </span>
+                  </span>
+                </span>
+              ) : (
+                ""
+              )}
+              {definition.synonyms.length ? (
+                <div>
+                  <p>
+                    <strong>Synonyms: </strong>
+                  </p>
+                  <ul className="synonyms">
+                    {definition.synonyms.map((synonym, index) => {
+                      return (
+                        <li className="synonym" key={index}>
+                          {synonym}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

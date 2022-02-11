@@ -9,11 +9,12 @@ function App() {
           <h1>Bookish Octo Dictionary 🐙📖</h1>
         </header>
         <Dictionary />
-        <footer className="footer">
+        <footer className="footer centered">
           <a
             href="https://github.com/angelanadal/dictionary-project"
             rel="noreferrer"
             target="_blank"
+            className="App-link"
           >
             Open-sourced on GitHub
           </a>
@@ -22,11 +23,17 @@ function App() {
             href="https://www.linkedin.com/in/angela-nadal/"
             rel="noreferrer"
             target="_blank"
+            className="App-link"
           >
             Angela Nadal
           </a>
           <span className="footer-text"> and hosted on </span>
-          <a href="https://www.netlify.com/" rel="noreferrer" target="_blank">
+          <a
+            className="App-link"
+            href="https://www.netlify.com/"
+            rel="noreferrer"
+            target="_blank"
+          >
             Netlify
           </a>
         </footer>

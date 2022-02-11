@@ -1,3 +1,13 @@
 .Results .phonetic-listen-btn {
   margin-left: 10px;
 }
+
+.Results .background-card {
+  border-radius: 10px;
+  max-width: 100%;
+  background: #d397fa;
+  border: 1px solid #b583d6;
+  box-shadow: 12px 12px 2px 1px #b583d6;
+  margin: 50px auto;
+  padding: 5px;
+}
