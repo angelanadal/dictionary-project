@@ -1,3 +1,4 @@
+import Twemoji from "react-twemoji";
 import "./Meaning.css";
 
 export default function Meaning({ meaning }) {
@@ -16,7 +17,9 @@ export default function Meaning({ meaning }) {
               </div>
               {definition.example ? (
                 <span className="example">
-                  <span className="fren">🐙</span>
+                  <span className="fren">
+                    <Twemoji options={{ className: "twemoji" }}>🐙</Twemoji>
+                  </span>
                   <span className="example-wrapper">
                     <span className="example-bubble">
                       <div className="example-header">Example:</div>

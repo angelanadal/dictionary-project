@@ -1,12 +1,16 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
+import Twemoji from "react-twemoji";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1>Bookish Octo Dictionary 🐙📖</h1>
+          <Twemoji options={{ className: "twemoji" }} className="centered">
+            🐙📖
+          </Twemoji>
+          <h1>Bookish Octo Dictionary </h1>
         </header>
         <Dictionary />
         <footer className="footer centered">
