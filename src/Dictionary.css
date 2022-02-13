@@ -1,0 +1,8 @@
+.Dictionary .search-box {
+  margin-right: 15px;
+}
+
+.Dictionary .btn-primary {
+  background-color: rgb(255, 107, 181);
+  border-color: rgb(180, 75, 128);
+}
