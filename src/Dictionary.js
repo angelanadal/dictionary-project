@@ -58,6 +58,8 @@ export default function Dictionary() {
           label="Go"
           value="Go"
         />
+        <br />
+        <small className="centered">ie. friend, octopus, journal</small>
       </form>
       {loading ? (
         <h2 className="centered">Loading...</h2>

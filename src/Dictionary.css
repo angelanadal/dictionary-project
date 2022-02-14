@@ -2,7 +2,11 @@
   margin-right: 15px;
 }
 
-.Dictionary .btn-primary {
-  background-color: rgb(255, 107, 181);
-  border-color: rgb(180, 75, 128);
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: rgb(255, 107, 181) !important;
+  border-color: rgb(180, 75, 128) !important;
 }
