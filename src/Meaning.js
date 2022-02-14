@@ -26,7 +26,7 @@ export default function Meaning({ meaning }) {
                       <span className="example-text">
                         <em>"{definition.example}"</em>
                       </span>
-                      <span class="speech-arrow"></span>
+                      <span className="speech-arrow"></span>
                     </span>
                   </span>
                 </span>

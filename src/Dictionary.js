@@ -9,8 +9,25 @@ export default function Dictionary() {
   let [loading, setLoading] = useState(false);
 
   function handleResponse(response) {
-    setSearchResults(response.data[0]);
-    setLoading(false);
+    let word = response.data[0].word;
+    let headers = {
+      Authorization: `563492ad6f917000010000018b38af014cc94e149f9c28cd0b2e8298`,
+    };
+    axios
+      .get(
+        `https://api.pexels.com/v1/search?query=${word}&per_page=9&orientation=landscape`,
+        {
+          headers,
+        }
+      )
+      .then((pexelsResponse) => {
+        console.log(pexelsResponse);
+        setSearchResults({
+          ...response.data[0],
+          photos: pexelsResponse.data.photos,
+        });
+        setLoading(false);
+      });
   }
 
   function handleSubmit(event) {

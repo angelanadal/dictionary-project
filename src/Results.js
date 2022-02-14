@@ -1,4 +1,5 @@
 import Meaning from "./Meaning";
+import Photos from "./Photos";
 import "./Results.css";
 
 export default function Results({ results }) {
@@ -34,6 +35,7 @@ export default function Results({ results }) {
             </div>
           );
         })}
+        <Photos photos={results.photos} />
       </div>
     );
   } else {
